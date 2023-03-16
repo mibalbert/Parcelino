@@ -27,8 +27,10 @@ window.addEventListener("DOMContentLoaded", () => {
       // mapId: "ec36b480711b61d6",
       // mapId: '8b428d47b01d701d',
 
-      mapTypeControl: false,
+      // mapTypeControl: false,
       disableDefaultUI: true,
+      scaleControl: true,
+      zoomControl: true,
       center: { lat: 52.713709, lng: -1.58632 },
       zoom: 6.65,
       /// Max zoom out level
@@ -44,6 +46,7 @@ window.addEventListener("DOMContentLoaded", () => {
         strictBounds: true,
       },
     });
+
     map.setTilt(45);
     new AutocompleteDirectionsHandler(map);
   };
@@ -125,6 +128,12 @@ window.addEventListener("DOMContentLoaded", () => {
       const destinationInput = document.getElementById(
         "input-destination-home"
       );
+
+      // const clear = document.querySelector(".clear");
+      // clear.addEventListener("click", () => {
+      //   // originInput.value.clear;
+      //   console.log("clicked");
+      // });
 
       // Specify just the place data fields that you need.
       const originAutocomplete = new google.maps.places.Autocomplete(

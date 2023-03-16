@@ -1,13 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require("tailwindcss/defaultTheme");
-
 module.exports = {
+  darkMode: "media",
   content: ["./server/**/*.{hbs,html,js}"],
   theme: {
-    screens: {
-      xs: "475px",
-      ...defaultTheme.screens,
-    },
+    extend: {},
   },
   plugins: [],
 };
