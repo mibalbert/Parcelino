@@ -138,7 +138,7 @@ window.addEventListener("DOMContentLoaded", () => {
         // strokeOpacity: 0.0,
         strokeOpacity: 1,
         scale: 3.5,
-        offset: "0",
+        offset: "-30",
         // icons: [{
         // 	icon: {
         // 		path: 'M 0,-1 0,1',
@@ -296,8 +296,8 @@ window.addEventListener("DOMContentLoaded", () => {
       let bottom = 0;
       left = screenWidth * 0.7;
       bottom = screenHeight * 0.15;
-      console.log(left);
-      console.log(bottom);
+      // console.log(left);
+      // console.log(bottom);
 
       // this.map.fitBounds(bounds);
       // this.map.setCenter(bounds.getCenter()); //or use custom center
@@ -320,15 +320,26 @@ window.addEventListener("DOMContentLoaded", () => {
         m1,
         m2
       );
+      let lineHeading1;
+      let lineHeading2;
       var lineHeading = google.maps.geometry.spherical.computeHeading(m1, m2);
+      console.log("line heading", lineHeading);
       if (lineHeading < 0) {
-        var lineHeading1 = lineHeading + 45;
-        var lineHeading2 = lineHeading + 135;
+        lineHeading1 = lineHeading + 45;
+        lineHeading2 = lineHeading + 135;
         // this.curvedLine.setOffSet(-5)
+      } else if (lineHeading > 170) {
+        lineHeading1 = lineHeading + 5;
+        lineHeading2 = lineHeading + 5;
+      } else if (lineHeading < -170) {
+        lineHeading1 = lineHeading + -5;
+        lineHeading2 = lineHeading + -5;
       } else {
-        var lineHeading1 = lineHeading + -45;
-        var lineHeading2 = lineHeading + -135;
+        lineHeading1 = lineHeading + -45;
+        lineHeading2 = lineHeading + -135;
       }
+      console.log("LINE HEADING 1", lineHeading1);
+      console.log("LINE HEADING 2", lineHeading2);
       var pA = google.maps.geometry.spherical.computeOffset(
         m1,
         lineLength / 6.2,
@@ -340,7 +351,7 @@ window.addEventListener("DOMContentLoaded", () => {
         lineHeading2
       );
 
-      let resolution = 0.05;
+      let resolution = 0.001;
 
       var lat1 = this.orgLatLng.lat();
       var long1 = this.orgLatLng.lng();
