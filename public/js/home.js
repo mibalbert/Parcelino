@@ -1,6 +1,17 @@
 window.addEventListener("DOMContentLoaded", () => {
   console.log("DOMContentLoaded");
 
+  // const over = document.getElementById("overlay-white-shadow");
+  // over.classList.remove("hidden");
+  // window.addEventListener("resize", () => {
+  //   const screenWidth = window.screen.width;
+  //   if (screenWidth >= 640) {
+  //     over.classList.remove("hidden");
+  //   } else {
+  //     over.classList.add("hidden");
+  //   }
+  // });
+
   const button = document.querySelector("#menu-button");
   const menu = document.querySelector("#menu");
 
@@ -20,8 +31,10 @@ window.addEventListener("DOMContentLoaded", () => {
   window.initMap = async function () {
     google.maps.visualRefresh = true;
 
-    const map = new google.maps.Map(document.getElementById("map-bitch"), {
-      mapId: "b1beacae401d047c",
+    const map = new google.maps.Map(document.getElementById("map"), {
+      mapId: "b1beacae401d047c", //Really Grey Map
+      // mapId: "ba75703dfee7d76c", //Grey Map
+      // mapId: "5dc01d292296e5fa", //Dark Map
       // mapId: "5b376c6ce00e84eb",
       // mapId: "14558a00a81bc942",
       // mapId: "ec36b480711b61d6",
@@ -29,10 +42,12 @@ window.addEventListener("DOMContentLoaded", () => {
 
       // mapTypeControl: false,
       disableDefaultUI: true,
-      scaleControl: true,
+      // scaleControl: true,
       zoomControl: true,
+
       center: { lat: 52.713709, lng: -1.58632 },
       zoom: 6.65,
+
       /// Max zoom out level
       // minZoom: 3,
       ///Stop user from seeing the edges of the map
@@ -45,6 +60,15 @@ window.addEventListener("DOMContentLoaded", () => {
         },
         strictBounds: true,
       },
+    });
+
+    window.addEventListener("resize", () => {
+      const screenWidth = window.screen.width;
+      if (screenWidth < 640) {
+        map.setOptions({ zoomControl: false });
+      } else {
+        map.setOptions({ zoomControl: true });
+      }
     });
 
     map.setTilt(45);
@@ -110,11 +134,11 @@ window.addEventListener("DOMContentLoaded", () => {
       });
 
       this.curvedLine = new google.maps.Polyline({
-        // geodesic: true,
+        geodesic: true,
         // strokeOpacity: 0.0,
         strokeOpacity: 1,
         scale: 3.5,
-        offset: "-30",
+        offset: "0",
         // icons: [{
         // 	icon: {
         // 		path: 'M 0,-1 0,1',
@@ -279,7 +303,7 @@ window.addEventListener("DOMContentLoaded", () => {
       // this.map.setCenter(bounds.getCenter()); //or use custom center
       // sets the bounds with the offset based on the window size - in progress
       // this.map.fitBounds(bounds);
-      if (screenWidth >= 640) {
+      if (screenWidth >= 768) {
         this.map.fitBounds(bounds, { left: left });
         this.map.setZoom(this.map.getZoom() - 0.95);
       } else {
