@@ -10,7 +10,7 @@
   > }}
   <div
     id="overlay-white-shadow"
-    class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-l from-transparent z-20 to-white w-full lg:w-3/12 h-1/4 lg:h-auto"
+    class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-l from-transparent z-20 to-white w-full lg:w-5/12 h-1/4 lg:h-auto"
   >
 
   </div>
@@ -21,7 +21,7 @@
   >
     <div class="mb-5">
       <h1
-        class="text-2xl font-extrabold tracking-tight text-gray-800 sm:text-2xl md:text-4xl lg:text-5xl 2xl:text-6xl"
+        class="text-2xl font-extrabold tracking-tight white:text-gray-800 dark:text-emerald-600 shadow-md sm:text-2xl md:text-4xl lg:text-5xl 2xl:text-6xl"
       >
         Send parcels worldwide with
         <span
@@ -97,6 +97,7 @@
             placeholder="Enter a origin location"
             onClick="this.setSelectionRange(0, this.value.length)"
             type="text"
+            value="66 Portland Place, London, UK"
             class="controls block w-full pl-10 p-2.5 px-8 bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             required
           />
@@ -153,6 +154,7 @@
             placeholder="Enter a destination location"
             onClick="this.setSelectionRange(0, this.value.length)"
             type="text"
+            value="44 Curzon Street by Mansley, Curzon Street, London, UK"
             class="controls block w-full pl-10 p-2.5 px-8 bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             required
           />
@@ -409,106 +411,237 @@
     </div>
   </div>
 </section>
-{{! 7, 17, 23, 32, 39, and 45 }}
-<div class="overflow-hidden bg-white py-24 sm:py-32">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div
-      class="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
-    >
-      <div class="lg:pr-8 lg:pt-4">
-        <div class="lg:max-w-lg">
-          <h2 class="text-base font-semibold leading-7 text-emerald-700">Deploy
-            faster</h2>
-          <p
-            class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
-          >A better workflow</p>
-          <p class="mt-6 text-lg leading-8 text-gray-600">Lorem ipsum, dolor sit
-            amet consectetur adipisicing elit. Maiores impedit perferendis
-            suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
-          <dl
-            class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none"
+
+<section>
+  <div
+    class="overflow-hidden bg-white rounded shadow-md text-slate-500 shadow-slate-200"
+  >
+    <div class="p-6">
+      <div class="flex flex-col items-center gap-4">
+        <!-- Brand -->
+        <a
+          id="WindUI-5-logo"
+          aria-label="WindUI logo"
+          aria-current="page"
+          class="flex items-center gap-2 text-lg leading-6 whitespace-nowrap focus:outline-none"
+          href="javascript:void(0)"
+        >
+          <svg
+            width="300"
+            height="300"
+            viewBox="0 0 300 300"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6 sh bg-emerald-500"
           >
-            <div class="relative pl-9">
-              <dt class="inline font-semibold text-gray-900">
-                <svg
-                  class="absolute top-1 left-1 h-5 w-5 text-emerald-700"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                Push to deploy.
-              </dt>
-              <dd class="inline">Lorem ipsum, dolor sit amet consectetur
-                adipisicing elit. Maiores impedit perferendis suscipit eaque,
-                iste dolor cupiditate blanditiis ratione.</dd>
-            </div>
-
-            <div class="relative pl-9">
-              <dt class="inline font-semibold text-gray-900">
-                <svg
-                  class="absolute top-1 left-1 h-5 w-5 text-emerald-700"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                SSL certificates.
-              </dt>
-              <dd class="inline">Anim aute id magna aliqua ad ad non deserunt
-                sunt. Qui irure qui lorem cupidatat commodo.</dd>
-            </div>
-
-            <div class="relative pl-9">
-              <dt class="inline font-semibold text-gray-900">
-                <svg
-                  class="absolute top-1 left-1 h-5 w-5 text-emerald-700"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M4.632 3.533A2 2 0 016.577 2h6.846a2 2 0 011.945 1.533l1.976 8.234A3.489 3.489 0 0016 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234z"
-                  ></path>
-                  <path
-                    fill-rule="evenodd"
-                    d="M4 13a2 2 0 100 4h12a2 2 0 100-4H4zm11.24 2a.75.75 0 01.75-.75H16a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75V15zm-2.25-.75a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75h-.01z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                Database backups.
-              </dt>
-              <dd class="inline">Ac tincidunt sapien vehicula erat auctor
-                pellentesque rhoncus. Et magna sit morbi lobortis.</dd>
-            </div>
-          </dl>
-        </div>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M88.1121 88.1134L150.026 150.027L150.027 150.027L150.027 150.027L150.028 150.027L150.027 150.026L88.1133 88.1122L88.1121 88.1134ZM273.878 273.877C272.038 274.974 196.128 319.957 165.52 289.349L88.1124 211.942L26.1434 273.911C26.1434 273.911 -20.3337 196.504 10.651 165.519L88.1121 88.1134L26.1417 26.1433C26.1417 26.1433 69.6778 0.00338007 104.519 0H0V300H300V0H104.533C116.144 0.00112664 126.789 2.90631 134.534 10.651L211.941 88.1123L273.877 26.177C274.974 28.0159 319.957 103.926 289.349 134.535L211.942 211.942L273.878 273.877ZM273.878 273.877L273.912 273.857V273.911L273.878 273.877ZM273.877 26.177L273.911 26.1429H273.857C273.857 26.1429 273.863 26.1544 273.877 26.177Z"
+              fill="#ffff"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0 0H300V300H0V0ZM150.026 150.025C121.715 99.731 88.1131 88.1122 88.1131 88.1122L10.6508 165.519C10.6508 165.519 26.143 150.027 150.026 150.027H150.027C150.026 150.027 150.026 150.027 150.026 150.027L150.026 150.027C99.731 178.339 88.1124 211.941 88.1124 211.941L165.52 289.348C165.52 289.348 150.032 273.86 150.027 150.027H150.029C178.341 200.323 211.944 211.942 211.944 211.942L289.352 134.535C289.352 134.535 273.864 150.023 150.027 150.027V150.027L150.027 150.027C200.322 121.715 211.941 88.1125 211.941 88.1125L134.534 10.651C134.534 10.651 150.026 26.1431 150.026 150.025ZM150.027 150.027L150.026 150.027C150.026 150.026 150.026 150.026 150.026 150.025C150.026 150.025 150.027 150.026 150.027 150.027ZM150.027 150.027L150.027 150.026L150.027 150.027C150.027 150.027 150.027 150.027 150.027 150.027L150.027 150.027ZM150.027 150.027C150.027 150.027 150.027 150.027 150.027 150.027H150.027L150.027 150.027Z"
+              fill="rgba(255, 255, 255, .2)"
+            ></path>
+          </svg>Brand</a>
+        <!-- Rating -->
+        <span
+          class="flex items-center gap-4 px-4 py-2 text-sm rounded shadow-md bg-slate-50 text-slate-500 shadow-slate-200"
+        >
+          <span
+            class="flex gap-1 text-amber-400"
+            role="img"
+            aria-label="Rating: 4 out of 5 stars"
+          >
+            <span aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </span>
+            <span aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </span>
+            <span aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </span>
+            <span aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </span>
+            <span aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                {{! fill="none" }}
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                {{! stroke="currentColor" }}
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+                ></path>
+              </svg>
+            </span>
+          </span>
+          <span> 4.9 out of 5 </span>
+        </span>
+        <!-- Helper text -->
+        <span class="text-xs leading-6 text-slate-400">based on 42 user ratings</span>
       </div>
-      <img
-        {{! src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+    </div>
+  </div>
+</section>
+
+{{! 7, 17, 23, 32, 39, and 45 }}
+<section>
+  <div class="overflow-hidden bg-white py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div
+        class="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
+      >
+        <div class="lg:pr-8 lg:pt-4">
+          <div class="lg:max-w-lg">
+            <h2
+              class="text-base font-semibold leading-7 text-emerald-700"
+            >Deploy faster</h2>
+            <p
+              class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+            >A better workflow</p>
+            <p class="mt-6 text-lg leading-8 text-gray-600">Lorem ipsum, dolor
+              sit amet consectetur adipisicing elit. Maiores impedit perferendis
+              suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
+            <dl
+              class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none"
+            >
+              <div class="relative pl-9">
+                <dt class="inline font-semibold text-gray-900">
+                  <svg
+                    class="absolute top-1 left-1 h-5 w-5 text-emerald-700"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Push to deploy.
+                </dt>
+                <dd class="inline">Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Maiores impedit perferendis suscipit eaque,
+                  iste dolor cupiditate blanditiis ratione.</dd>
+              </div>
+
+              <div class="relative pl-9">
+                <dt class="inline font-semibold text-gray-900">
+                  <svg
+                    class="absolute top-1 left-1 h-5 w-5 text-emerald-700"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  SSL certificates.
+                </dt>
+                <dd class="inline">Anim aute id magna aliqua ad ad non deserunt
+                  sunt. Qui irure qui lorem cupidatat commodo.</dd>
+              </div>
+
+              <div class="relative pl-9">
+                <dt class="inline font-semibold text-gray-900">
+                  <svg
+                    class="absolute top-1 left-1 h-5 w-5 text-emerald-700"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4.632 3.533A2 2 0 016.577 2h6.846a2 2 0 011.945 1.533l1.976 8.234A3.489 3.489 0 0016 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234z"
+                    ></path>
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 13a2 2 0 100 4h12a2 2 0 100-4H4zm11.24 2a.75.75 0 01.75-.75H16a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75V15zm-2.25-.75a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75h-.01z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Database backups.
+                </dt>
+                <dd class="inline">Ac tincidunt sapien vehicula erat auctor
+                  pellentesque rhoncus. Et magna sit morbi lobortis.</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <img
+          {{! src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
         alt="Product screenshot"
         class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
         width="2432"
         height="1442" }}
-        src="../assets/first-pic-home.jpg"
-        alt="Product screenshot"
-        class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
-        width="2432"
-        height="1442"
-      />
+          src="../assets/first-pic-home.jpg"
+          alt="Product screenshot"
+          class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+          width="2432"
+          height="1442"
+        />
+      </div>
     </div>
   </div>
-</div>
+</section>
 
 {{! <div
   id="overlay-white-shadow"

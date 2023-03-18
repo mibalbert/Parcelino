@@ -1,6 +1,10 @@
 window.addEventListener("DOMContentLoaded", () => {
   console.log("DOMContentLoaded");
 
+  if (-180 < -170) {
+    console.log("yes");
+  }
+
   const button = document.querySelector("#menu-button");
   const menu = document.querySelector("#menu");
 

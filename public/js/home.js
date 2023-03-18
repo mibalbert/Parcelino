@@ -138,7 +138,7 @@ window.addEventListener("DOMContentLoaded", () => {
         // strokeOpacity: 0.0,
         strokeOpacity: 1,
         scale: 3.5,
-        offset: "-30",
+        offset: "50",
         // icons: [{
         // 	icon: {
         // 		path: 'M 0,-1 0,1',
@@ -163,6 +163,7 @@ window.addEventListener("DOMContentLoaded", () => {
       const originAutocomplete = new google.maps.places.Autocomplete(
         originInput,
         {
+          strictBounds: true,
           componentRestrictions: { country: "uk" },
           fields: ["place_id", "geometry"],
         }
@@ -171,6 +172,7 @@ window.addEventListener("DOMContentLoaded", () => {
       const destinationAutocomplete = new google.maps.places.Autocomplete(
         destinationInput,
         {
+          strictBounds: true,
           componentRestrictions: { country: "uk" },
           fields: ["place_id", "geometry"],
         }
@@ -312,6 +314,39 @@ window.addEventListener("DOMContentLoaded", () => {
         // this.map.fitBounds(bounds);
         // this.map.setZoom(this.map.getZoom());
       }
+      // Define a variable to store the previous distance
+      // let previousDistance = 0;
+
+      // // Add a new point to the map
+      // addPoint = (orw) => {
+      //   // Calculate the distance between the new point and the previous point
+      //   const currentDistance =
+      //     google.maps.geometry.spherical.computeDistanceBetween(
+      //       new google.maps.LatLng(lat, lng),
+      //       new google.maps.LatLng(previousLat, previousLng)
+      //     );
+
+      //   // If the distance is more than 5 times the previous distance, set a timeout for a short delay
+      //   if (currentDistance > previousDistance * 5) {
+      //     setTimeout(() => {
+      //       // Call the fitBounds() method to zoom to the new bounds of the map
+
+      //       this.map.fitBounds(this.bounds, { left: this.left });
+      //       this.map.setZoom(this.map.getZoom() - 0.95);
+
+      //       const bounds = new google.maps.LatLngBounds();
+      //       // Add all the points to the bounds
+      //       bounds.extend(new google.maps.LatLng(previousLat, previousLng));
+      //       bounds.extend(new google.maps.LatLng(lat, lng));
+      //       map.fitBounds(bounds);
+      //     }, 500); // Delay for 500ms
+      //   }
+
+      // Update the previous distance and point
+      //   previousDistance = currentDistance;
+      //   previousLat = lat;
+      //   previousLng = lng;
+      // }
       // this.map.setZoom(this.map.getZoom());
     }
 
@@ -320,24 +355,42 @@ window.addEventListener("DOMContentLoaded", () => {
         m1,
         m2
       );
-      let lineHeading1;
-      let lineHeading2;
+      // let lineHeading1;
+      // let lineHeading2;
+      let called = "";
       var lineHeading = google.maps.geometry.spherical.computeHeading(m1, m2);
       console.log("line heading", lineHeading);
-      if (lineHeading < 0) {
-        lineHeading1 = lineHeading + 45;
-        lineHeading2 = lineHeading + 135;
-        // this.curvedLine.setOffSet(-5)
-      } else if (lineHeading > 170) {
-        lineHeading1 = lineHeading + 5;
-        lineHeading2 = lineHeading + 5;
-      } else if (lineHeading < -170) {
-        lineHeading1 = lineHeading + -5;
-        lineHeading2 = lineHeading + -5;
-      } else {
-        lineHeading1 = lineHeading + -45;
-        lineHeading2 = lineHeading + -135;
+
+      // Compute the line headings for the two curves
+      let lineHeading1, lineHeading2;
+
+      if (lineHeading > 160) {
+        lineHeading1 = lineHeading - 20;
+        lineHeading2 = lineHeading - 170;
+        called = "1";
+      } else if (lineHeading >= 15 && lineHeading <= 160) {
+        lineHeading1 = lineHeading - 35;
+        lineHeading2 = lineHeading - 145;
+        called = "2";
+      } else if (lineHeading > 0 && lineHeading <= 15) {
+        lineHeading1 = lineHeading - 10;
+        lineHeading2 = lineHeading - 170;
+        called = "3";
+      } else if (lineHeading < 0 && lineHeading >= -15) {
+        lineHeading1 = lineHeading + 10;
+        lineHeading2 = lineHeading + 165;
+        called = "4";
+      } else if (lineHeading <= -15 && lineHeading >= -160) {
+        lineHeading1 = lineHeading + 35;
+        lineHeading2 = lineHeading + 145;
+        called = "5";
+      } else if (lineHeading < -160) {
+        //FOR OVER 175
+        lineHeading1 = lineHeading - 5;
+        lineHeading2 = lineHeading + 185;
+        called = "6";
       }
+      console.log(called);
       console.log("LINE HEADING 1", lineHeading1);
       console.log("LINE HEADING 2", lineHeading2);
       var pA = google.maps.geometry.spherical.computeOffset(
