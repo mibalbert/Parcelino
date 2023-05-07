@@ -757,14 +757,14 @@ video {
 .gap-1 {
   gap: 0.25rem;
 }
-.gap-8 {
-  gap: 2rem;
-}
 .gap-2 {
   gap: 0.5rem;
 }
 .gap-4 {
   gap: 1rem;
+}
+.gap-8 {
+  gap: 2rem;
 }
 .gap-x-8 {
   -moz-column-gap: 2rem;
@@ -820,6 +820,10 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(3 105 161 / var(--tw-border-opacity));
 }
+.bg-emerald-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(16 185 129 / var(--tw-bg-opacity));
+}
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
@@ -832,17 +836,13 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(229 229 229 / var(--tw-bg-opacity));
 }
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-.bg-emerald-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(16 185 129 / var(--tw-bg-opacity));
-}
 .bg-slate-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(248 250 252 / var(--tw-bg-opacity));
+}
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 .bg-gradient-to-l {
   background-image: linear-gradient(to left, var(--tw-gradient-stops));
@@ -1041,6 +1041,9 @@ video {
 .uppercase {
   text-transform: uppercase;
 }
+.leading-6 {
+  line-height: 1.5rem;
+}
 .leading-7 {
   line-height: 1.75rem;
 }
@@ -1050,11 +1053,12 @@ video {
 .leading-tight {
   line-height: 1.25;
 }
-.leading-6 {
-  line-height: 1.5rem;
-}
 .tracking-tight {
   letter-spacing: -0.025em;
+}
+.text-amber-400 {
+  --tw-text-opacity: 1;
+  color: rgb(251 191 36 / var(--tw-text-opacity));
 }
 .text-emerald-700 {
   --tw-text-opacity: 1;
@@ -1092,6 +1096,14 @@ video {
   --tw-text-opacity: 1;
   color: rgb(125 211 252 / var(--tw-text-opacity));
 }
+.text-slate-400 {
+  --tw-text-opacity: 1;
+  color: rgb(148 163 184 / var(--tw-text-opacity));
+}
+.text-slate-500 {
+  --tw-text-opacity: 1;
+  color: rgb(100 116 139 / var(--tw-text-opacity));
+}
 .text-teal-600 {
   --tw-text-opacity: 1;
   color: rgb(13 148 136 / var(--tw-text-opacity));
@@ -1107,26 +1119,14 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-.text-amber-400 {
-  --tw-text-opacity: 1;
-  color: rgb(251 191 36 / var(--tw-text-opacity));
-}
-.text-slate-400 {
-  --tw-text-opacity: 1;
-  color: rgb(148 163 184 / var(--tw-text-opacity));
-}
-.text-slate-500 {
-  --tw-text-opacity: 1;
-  color: rgb(100 116 139 / var(--tw-text-opacity));
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-xl {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-.shadow-md {
-  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-slate-200 {
@@ -1229,6 +1229,11 @@ video {
     background-color: rgb(2 132 199 / var(--tw-bg-opacity));
   }
 
+  .dark\:text-emerald-600 {
+    --tw-text-opacity: 1;
+    color: rgb(5 150 105 / var(--tw-text-opacity));
+  }
+
   .dark\:text-gray-400 {
     --tw-text-opacity: 1;
     color: rgb(156 163 175 / var(--tw-text-opacity));
@@ -1247,16 +1252,6 @@ video {
   .dark\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
-
-  .dark\:text-emerald-700 {
-    --tw-text-opacity: 1;
-    color: rgb(4 120 87 / var(--tw-text-opacity));
-  }
-
-  .dark\:text-emerald-600 {
-    --tw-text-opacity: 1;
-    color: rgb(5 150 105 / var(--tw-text-opacity));
   }
 
   .dark\:placeholder-gray-400::-moz-placeholder {
@@ -1537,10 +1532,6 @@ video {
 
   .lg\:h-auto {
     height: auto;
-  }
-
-  .lg\:w-3\/12 {
-    width: 25%;
   }
 
   .lg\:w-5\/12 {
