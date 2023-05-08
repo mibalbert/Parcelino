@@ -179,17 +179,17 @@ window.addEventListener("DOMContentLoaded", () => {
 
       const screenWidth = window.innerWidth;
       const screenHeight = window.innerHeight;
-      const leftMarginRatio = 0.3;
-      const bottomMarginRatio = 0.1;
+      const leftMarginRatio = 0.5;
+      const topMarginRatio = 0.35;
 
       const leftPadding = screenWidth * leftMarginRatio;
-      const bottomPadding = screenHeight * bottomMarginRatio;
+      const topPadding = screenHeight * topMarginRatio;
 
       if (screenWidth >= 768) {
         this.map.fitBounds(bounds, { left: leftPadding });
         this.map.setZoom(this.map.getZoom() - 0.95);
       } else {
-        this.map.fitBounds(bounds, { bottom: bottomPadding });
+        this.map.fitBounds(bounds, { top: topPadding });
         this.map.setZoom(this.map.getZoom() - 0.95);
       }
     }

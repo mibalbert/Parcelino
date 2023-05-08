@@ -2,26 +2,18 @@
 
 {{! home.hbs }}
 <script src="/js/home.js" type="module"></script>
-
-<section class="w-100 h-4/6 relative shadow-xl">
-  {{! <div
-    id="overlay-white-shadow"
-    class="hidden absolute inset-0 bg-gradient-to-l from-transparent z-20 to-white w-3/12"
-  > }}
+<section class="w-full h-4/6 relative shadow-xl">
   <div
     id="overlay-white-shadow"
     class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-l from-transparent z-20 to-white w-full lg:w-5/12 h-1/4 lg:h-auto"
-  >
-
-  </div>
+  ></div>
   <div id="map" style="width: 100%; height:100%"></div>
-
   <div
     class="absolute top-5 2xl:top-36 text-center lg:text-left 2xl:left-28 z-50 bg-none text-lg font-bold overflow-hidden lg:max-w-2xl"
   >
     <div class="mb-5">
       <h1
-        class="text-2xl font-extrabold tracking-tight white:text-gray-800 dark:text-emerald-600 sm:text-2xl md:text-4xl lg:text-5xl 2xl:text-6xl"
+        class="text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl font-extrabold tracking-tight white:text-gray-800 dark:text-emerald-600"
       >
         Send parcels worldwide with
         <span
@@ -41,36 +33,9 @@
     </div>
   </div>
 
-  {{!-- 
-  <div
-    class="absolute top-5 2xl:top-36 text-center 2xl:left-28 z-50 bg-none text-lg font-bold overflow-hidden lg:max-w-2xl"
-  >
-    <div class="mb-5">
-      <h1
-        class="text-2xl font-extrabold tracking-tight text-gray-800 sm:text-2xl md:text-4xl lg:text-5xl 2xl:text-6xl"
-      >Send parcels all around the World with
-
-        <span
-          class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-sky-400 md:w-60 lg:max-w-2xl"
-          {{! class="text-teal-600 md:w-60 lg:max-w-2xl" }}
-          {{! class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-800 from-sky-600 md:w-60 lg:max-w-2xl" }}
-        >UK's #1</span>
-        <br />
-        Courier Compare Platform.</h1>
-
-    </div>
-    <div>
-      <p
-        class="sr-only sm:not-sr-only text-center w-full max-w-1/2 lg:text-left text-lg font-normal text-gray-600 lg:max-w-2xl"
-        {{! class="text-center sm:text-left text-sm sm:text-lg font-normal text-gray-600 lg:text-xl" }}
-      >Here at Flowbite we focus on markets where technology, innovation, and
-        capital can unlock long-term value and drive economic growth.</p>
-    </div>
-  </div> --}}
-
   <div class="flex justify-center relative">
     <div
-      class="md:flex absolute -top-24 md:-top-7 z-20 grid grid-rows-3 grid-col-1 gap-1 xs:gap-2"
+      class="md:flex absolute -top-12 md:-top-7 z-20 grid grid-rows-3 grid-col-1 gap-1 xs:gap-2"
     >
       <div class="flex items-center">
 
@@ -117,20 +82,6 @@
           </div> }}
         </div>
       </div>
-      {{! <div class="clear-button-container">
-        <div id="clear-button">clear</div>
-      </div> }}
-
-      {{! <input
-        id="input-destination-home"
-        class="controls"
-        type="text"
-        placeholder="Enter a destination location"
-        onClick="this.setSelectionRange(0, this.value.length)"
-      />
-      <div class="clear-button-container">
-        <div id="clear-button">clear</div>
-      </div> }}
       <div class="flex items-center">
 
         {{! <label for="simple-search" class="sr-only">Search</label> }}
@@ -177,7 +128,7 @@
         </div>
 
       </div>
-      <button
+      {{!-- <button
         type="submit"
         class="flex justify-center hover:scale-105 p-2.5 w-64 xs:w-80 md:w-14 h-12 md:h-14 text-sm font-medium text-white rounded-lg border border-sky-700 hover:bg-sky-700 focus:ring-4 focus:outline-none focus:ring-sky-300 dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-700"
       >
@@ -195,7 +146,7 @@
           ></path></svg>
         {{! <span class="sr-only">Search</span> }}
         <span class="text-md my-auto px-2 md:hidden">Search</span>
-      </button>
+      </button> --}}
     </div>
   </div>
 </section>
