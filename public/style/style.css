@@ -564,6 +564,9 @@ video {
 .-top-12 {
   top: -3rem;
 }
+.top-0 {
+  top: 0px;
+}
 .z-20 {
   z-index: 20;
 }
@@ -584,6 +587,10 @@ video {
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
+}
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .mb-12 {
   margin-bottom: 3rem;
@@ -656,6 +663,12 @@ video {
 }
 .h-9 {
   height: 2.25rem;
+}
+.h-screen {
+  height: 100vh;
+}
+.h-full {
+  height: 100%;
 }
 .w-10 {
   width: 2.5rem;
@@ -786,6 +799,10 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(3 105 161 / var(--tw-border-opacity));
 }
+.border-emerald-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(5 150 105 / var(--tw-border-opacity));
+}
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
@@ -882,6 +899,14 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+.py-40 {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 .pl-10 {
   padding-left: 2.5rem;
@@ -1016,6 +1041,10 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.text-emerald-600 {
+  --tw-text-opacity: 1;
+  color: rgb(5 150 105 / var(--tw-text-opacity));
+}
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -1046,6 +1075,10 @@ video {
 .hover\:cursor-pointer:hover {
   cursor: pointer;
 }
+.hover\:border-emerald-400:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(52 211 153 / var(--tw-border-opacity));
+}
 .hover\:bg-sky-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(3 105 161 / var(--tw-bg-opacity));
@@ -1061,6 +1094,14 @@ video {
 .hover\:text-sky-600:hover {
   --tw-text-opacity: 1;
   color: rgb(2 132 199 / var(--tw-text-opacity));
+}
+.hover\:text-emerald-300:hover {
+  --tw-text-opacity: 1;
+  color: rgb(110 231 183 / var(--tw-text-opacity));
+}
+.hover\:text-emerald-400:hover {
+  --tw-text-opacity: 1;
+  color: rgb(52 211 153 / var(--tw-text-opacity));
 }
 .hover\:underline:hover {
   text-decoration-line: underline;
@@ -1111,6 +1152,16 @@ video {
   .dark\:bg-sky-600 {
     --tw-bg-opacity: 1;
     background-color: rgb(2 132 199 / var(--tw-bg-opacity));
+  }
+
+  .dark\:bg-emerald-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(6 95 70 / var(--tw-bg-opacity));
+  }
+
+  .dark\:bg-emerald-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(6 78 59 / var(--tw-bg-opacity));
   }
 
   .dark\:text-emerald-600 {
@@ -1354,9 +1405,18 @@ video {
     padding: 1rem;
   }
 
+  .md\:p-2 {
+    padding: 0.5rem;
+  }
+
   .md\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+
+  .md\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .md\:pt-0 {
@@ -1371,8 +1431,21 @@ video {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
 }
 @media (min-width: 1024px) {
+
+  .lg\:left-10 {
+    left: 2.5rem;
+  }
+
+  .lg\:top-16 {
+    top: 4rem;
+  }
 
   .lg\:mx-0 {
     margin-left: 0px;
@@ -1410,6 +1483,10 @@ video {
 
   .lg\:max-w-none {
     max-width: none;
+  }
+
+  .lg\:max-w-md {
+    max-width: 28rem;
   }
 
   .lg\:grid-cols-2 {
@@ -1477,8 +1554,22 @@ video {
     top: 9rem;
   }
 
+  .\32xl\:top-28 {
+    top: 7rem;
+  }
+
+  .\32xl\:my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
   .\32xl\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .\32xl\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }

@@ -56,8 +56,8 @@ window.addEventListener("DOMContentLoaded", () => {
       this.map = map;
       this.originPlaceId = "";
       this.destinationPlaceId = "";
-      this.leftMargin = 30;
-      this.rightMargin = 80;
+      // this.leftMargin = 30;
+      // this.rightMargin = 80;
     }
 
     initializeServicesAndMarkers(map) {
@@ -134,7 +134,7 @@ window.addEventListener("DOMContentLoaded", () => {
       const location = place.geometry.location;
       this.orgMarker.setPlace({ placeId: place.place_id, location });
       this.orgMarker.setVisible(true);
-      this.map.setCenter(location, { left: 600 });
+      this.map.setCenter(location, { left: 100 });
     }
 
     setDestination(place, lat, lng) {
@@ -179,13 +179,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
       const screenWidth = window.innerWidth;
       const screenHeight = window.innerHeight;
-      const leftMarginRatio = 0.5;
+      const leftMarginRatio = 0.65;
       const topMarginRatio = 0.35;
 
       const leftPadding = screenWidth * leftMarginRatio;
       const topPadding = screenHeight * topMarginRatio;
 
-      if (screenWidth >= 768) {
+      if (screenWidth >= 1024) {
         this.map.fitBounds(bounds, { left: leftPadding });
         this.map.setZoom(this.map.getZoom() - 0.95);
       } else {

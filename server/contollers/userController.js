@@ -5,7 +5,8 @@ require("dotenv").config();
 // Home
 exports.homeGET = (req, res) => {
   console.log("GET //");
-  res.render("home");
+  const googleMapsKey = process.env.GOOGLE_MAPS_API_KEY;
+  res.render("home", { googleMapsKey });
 };
 
 exports.testingGET = (req, res) => {
