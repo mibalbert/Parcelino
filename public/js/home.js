@@ -56,13 +56,9 @@ window.addEventListener("DOMContentLoaded", () => {
       this.map = map;
       this.originPlaceId = "";
       this.destinationPlaceId = "";
-      // this.leftMargin = 30;
-      // this.rightMargin = 80;
     }
 
     initializeServicesAndMarkers(map) {
-      this.directionsService = new google.maps.DirectionsService();
-      this.directionsRenderer = new google.maps.DirectionsRenderer();
       this.geocoder = new google.maps.Geocoder();
       this.orgMarker = this.createMarker(map, google.maps.Animation.DROP);
       this.dstMarker = this.createMarker(map, google.maps.Animation.DROP);
@@ -124,6 +120,7 @@ window.addEventListener("DOMContentLoaded", () => {
         } else {
           this.setDestination(place, lat, lng);
         }
+
         this.route();
       });
     }
@@ -158,7 +155,7 @@ window.addEventListener("DOMContentLoaded", () => {
           lng: this.dstMarker.getPlace().location.lng(),
         },
       ];
-      this.centralize(markerList);
+      this.offsetMap(markerList);
 
       const orgLatLng = this.orgMarker.getPlace().location;
       const dstLatLng = this.dstMarker.getPlace().location;
@@ -167,31 +164,16 @@ window.addEventListener("DOMContentLoaded", () => {
       this.shadowLine.getPath().push(dstLatLng);
       this.shadowLine.setMap(this.map);
 
-      this.drawDashedCurve(orgLatLng, dstLatLng, this.map);
-    }
+      // This was made do to the very annoying bug of making the polyline
+      // extremly big when there is a huge diffrence between the distances
+      // of the previous addresses and the current addresses inputed.
+      // Comment the setTimeout part and play around with the input
+      // values to see for yourself
 
-    centralize(markerList) {
-      const bounds = new google.maps.LatLngBounds();
-
-      markerList.forEach((marker) => {
-        bounds.extend(new google.maps.LatLng(marker.lat, marker.lng));
-      });
-
-      const screenWidth = window.innerWidth;
-      const screenHeight = window.innerHeight;
-      const leftMarginRatio = 0.65;
-      const topMarginRatio = 0.35;
-
-      const leftPadding = screenWidth * leftMarginRatio;
-      const topPadding = screenHeight * topMarginRatio;
-
-      if (screenWidth >= 1024) {
-        this.map.fitBounds(bounds, { left: leftPadding });
-        this.map.setZoom(this.map.getZoom() - 0.95);
-      } else {
-        this.map.fitBounds(bounds, { top: topPadding });
-        this.map.setZoom(this.map.getZoom() - 0.95);
-      }
+      window.setTimeout(() => {
+        this.drawDashedCurve(orgLatLng, dstLatLng, this.map);
+      }, 10);
+      this.map.setTilt(45);
     }
 
     drawDashedCurve(m1, m2, map) {
@@ -218,7 +200,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
       this.curvedLine.setPath(path);
       this.curvedLine.setMap(this.map);
-      map.setTilt(45);
     }
 
     calculateLineHeadings(lineHeading) {
@@ -281,6 +262,30 @@ window.addEventListener("DOMContentLoaded", () => {
       });
 
       return path;
+    }
+
+    offsetMap(markerList) {
+      const bounds = new google.maps.LatLngBounds();
+
+      markerList.forEach((marker) => {
+        bounds.extend(new google.maps.LatLng(marker.lat, marker.lng));
+      });
+
+      const screenWidth = window.innerWidth;
+      const screenHeight = window.innerHeight;
+      const leftMarginRatio = 0.65;
+      const topMarginRatio = 0.35;
+
+      const leftPadding = screenWidth * leftMarginRatio;
+      const topPadding = screenHeight * topMarginRatio;
+
+      if (screenWidth >= 1024) {
+        this.map.fitBounds(bounds, { left: leftPadding });
+        this.map.setZoom(this.map.getZoom() - 0.95);
+      } else {
+        this.map.fitBounds(bounds, { top: topPadding });
+        this.map.setZoom(this.map.getZoom() - 0.95);
+      }
     }
   }
 

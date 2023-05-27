@@ -5,5 +5,5 @@ services:
       - ./:/app
       - /app/node_modules
     environment:
-      - PORT=5000
+      - PORT=8000
     command: npm run dev
