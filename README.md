@@ -9,7 +9,6 @@ This is a Node.js application that demonstrates the usage of Google Maps API to 
 
 ## Installation and Setup
 
-<br />
 
 To set up the project, follow these steps:
 
@@ -38,7 +37,7 @@ npm install
 
 5. Replace the placeholder API key in the following line of code with your own API key:
 
-The file where this is found is public/js/home.js
+The file where this is found is at  **public/js/home.js**
 
 ```bash
 script.src = "https://maps.googleapis.com/maps/api/js?key=****YOUR_API_KEY****&libraries=places,geometry&callback=initMap";
@@ -50,7 +49,6 @@ script.src = "https://maps.googleapis.com/maps/api/js?key=****YOUR_API_KEY****&l
 
 ## Usage
 
-<br />
 
 ### Running the Application
 
@@ -101,11 +99,9 @@ This project also provides Docker support for easy deployment and containerizati
 
 ### Prerequisites
 
-<br />
 
 - Docker: <ins>Install Docker<ins>
 
-Building and Running with Docker
 
 To build and run the application using Docker, follow these steps:
 
@@ -133,7 +129,6 @@ Alternatively, you can use Docker Compose to manage the application and its depe
 
 1. Build and start the Docker services.
 
-<br />
 
 ```bash
 docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d  // For development
@@ -154,7 +149,6 @@ docker-compose down -v
 
 ## Acknowledgements
 
-<br />
 
 This project utilizes the following technologies and libraries:
 
@@ -168,6 +162,5 @@ Docker
 
 ## License
 
-<br />
 
 This project is licensed under the <ins>MIT License<ins>.
