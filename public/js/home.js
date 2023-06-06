@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", () => {
   // Google Maps API script
   const script = document.createElement("script");
   script.src =
-    "https://maps.googleapis.com/maps/api/js?key=**API-KEY**&libraries=places,geometry&callback=initMap";
+    "https://maps.googleapis.com/maps/api/js?key=AIzaSyCT9NrHuBQBgnTBOjsyiD-sm5kdzsMbeb8&libraries=places,geometry&callback=initMap";
   script.async = true;
 
   window.initMap = async function () {
