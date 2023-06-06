@@ -28,7 +28,7 @@ npm install
 5. Replace the placeholder API key in the following line of code with your own API key:
 
 ```bash
-script.src = "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places,geometry&callback=initMap";
+script.src = "https://maps.googleapis.com/maps/api/js?key=**YOUR_API_KEY**&libraries=places,geometry&callback=initMap";
 ```
 
 ## Usage
