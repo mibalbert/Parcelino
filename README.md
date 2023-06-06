@@ -1,15 +1,20 @@
 
 
- <video loop src="public/assets/readme-video.mp4">  video </video> 
-
-
 # Parcelino
 This is a Node.js application that demonstrates the usage of Google Maps API to display a map with route directions and markers. The application provides an interactive interface to enter origin and destination addresses and generates a route between them.
 
 
 
+<br />
+
 ## Installation and Setup
+
+<br />
+
 To set up the project, follow these steps:
+
+
+<br />
 
 1. Clone the repository to your local machine.
 
@@ -41,9 +46,15 @@ script.src = "https://maps.googleapis.com/maps/api/js?key=****YOUR_API_KEY****&l
 
 
 
+<br />
+
 ## Usage
 
+<br />
+
 ### Running the Application
+
+<br />
 
 To run the application, execute the following command:
 
@@ -53,8 +64,11 @@ npm start
 
 This will start the Node.js server and make the application available at **`http://localhost:8000`**.
 
+<br />
+
 ## Interacting with the Application
 
+<br />
 
 1. Open a web browser and navigate to **`http://localhost:8000`**.
 
@@ -74,13 +88,20 @@ This will start the Node.js server and make the application available at **`http
 
 
 
+<br />
+
 ## Docker Support
+
+<br />
 
 This project also provides Docker support for easy deployment and containerization.
 
 
+<br />
+
 ### Prerequisites
 
+<br />
 
 - Docker: <ins>Install Docker<ins>
 
@@ -106,11 +127,13 @@ docker run -p 8000:8000 project-name
 
 ### Docker Compose
 
-
+<br />
 Alternatively, you can use Docker Compose to manage the application and its dependencies.
 
 
 1. Build and start the Docker services.
+
+<br />
 
 ```bash
 docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d  // For development
@@ -127,7 +150,11 @@ docker-compose down -v
 ```
 
 
+<br />
+
 ## Acknowledgements
+
+<br />
 
 This project utilizes the following technologies and libraries:
 
@@ -137,6 +164,10 @@ Google Maps API
 Docker
 
 
+<br />
+
 ## License
+
+<br />
 
 This project is licensed under the <ins>MIT License<ins>.
