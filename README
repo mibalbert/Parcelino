@@ -1,3 +1,15 @@
-```This is a cool maps project ```
 
-asdadadsdas
+# Project Name
+
+This is a Node.js application that demonstrates the usage of Google Maps API to display a map with route directions and markers. The application provides an interactive interface to enter origin and destination addresses and generates a route between them.
+
+## Installation and Setup
+
+To set up the project, follow these steps:
+
+1. Clone the repository to your local machine.
+```bash
+git clone <repository-url>
+```
+
+
