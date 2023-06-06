@@ -34,7 +34,7 @@ npm install
 The file where this is found is public/js/home.js
 
 ```bash
-script.src = "https://maps.googleapis.com/maps/api/js?key=**YOUR_API_KEY**&libraries=places,geometry&callback=initMap";
+script.src = "https://maps.googleapis.com/maps/api/js?key=****YOUR_API_KEY****&libraries=places,geometry&callback=initMap";
 ```
 
 ## Usage
@@ -98,7 +98,9 @@ Alternatively, you can use Docker Compose to manage the application and its depe
 1. Build and start the Docker services.
 
 ```bash
-docker-compose up -d
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d  // For development
+
+docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d  // For production
 ```
 
 2. Access the application through the browser at http://localhost:8000.
@@ -106,7 +108,7 @@ docker-compose up -d
 3. Stop the Docker services when done.
 
 ```bash
-docker-compose down
+docker-compose down -v
 ```
 
 ## Acknowledgements
