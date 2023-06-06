@@ -1,4 +1,8 @@
 
+
+ <video loop src="public/assets/readme-video.mp4">  video </video> 
+
+
 # Parcelino
 This is a Node.js application that demonstrates the usage of Google Maps API to display a map with route directions and markers. The application provides an interactive interface to enter origin and destination addresses and generates a route between them.
 
