@@ -6,6 +6,8 @@
 # Parcelino
 This is a Node.js application that demonstrates the usage of Google Maps API to display a map with route directions and markers. The application provides an interactive interface to enter origin and destination addresses and generates a route between them.
 
+
+
 ## Installation and Setup
 To set up the project, follow these steps:
 
@@ -37,8 +39,12 @@ The file where this is found is public/js/home.js
 script.src = "https://maps.googleapis.com/maps/api/js?key=****YOUR_API_KEY****&libraries=places,geometry&callback=initMap";
 ```
 
+
+
 ## Usage
+
 ### Running the Application
+
 To run the application, execute the following command:
 
 ```bash
@@ -48,6 +54,7 @@ npm start
 This will start the Node.js server and make the application available at **`http://localhost:8000`**.
 
 ## Interacting with the Application
+
 
 1. Open a web browser and navigate to **`http://localhost:8000`**.
 
@@ -65,17 +72,22 @@ This will start the Node.js server and make the application available at **`http
 
 8. You can resize the window to see the responsive behavior of the map.
 
+
+
 ## Docker Support
 
 This project also provides Docker support for easy deployment and containerization.
 
+
 ### Prerequisites
+
 
 - Docker: <ins>Install Docker<ins>
 
 Building and Running with Docker
 
 To build and run the application using Docker, follow these steps:
+
 
 1. Build the Docker image.
 
@@ -91,9 +103,12 @@ docker run -p 8000:8000 project-name
 
 3. Access the application through the browser at http://localhost:8000.
 
+
 ### Docker Compose
 
+
 Alternatively, you can use Docker Compose to manage the application and its dependencies.
+
 
 1. Build and start the Docker services.
 
@@ -111,7 +126,9 @@ docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d  // For pr
 docker-compose down -v
 ```
 
+
 ## Acknowledgements
+
 This project utilizes the following technologies and libraries:
 
 Node.js
@@ -121,4 +138,5 @@ Docker
 
 
 ## License
+
 This project is licensed under the <ins>MIT License<ins>.
