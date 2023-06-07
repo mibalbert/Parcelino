@@ -205,24 +205,26 @@ window.addEventListener("DOMContentLoaded", () => {
     calculateLineHeadings(lineHeading) {
       let lineHeading1, lineHeading2;
 
+      console.log(lineHeading);
+
       if (lineHeading > 160) {
-        lineHeading1 = lineHeading - 20;
-        lineHeading2 = lineHeading - 170;
-      } else if (lineHeading >= 15 && lineHeading <= 160) {
-        lineHeading1 = lineHeading - 35;
-        lineHeading2 = lineHeading - 145;
+        lineHeading1 = lineHeading - 25;
+        lineHeading2 = lineHeading - 155;
+      } else if (lineHeading <= -160) {
+        lineHeading1 = lineHeading + 5;
+        lineHeading2 = lineHeading + 175;
       } else if (lineHeading > 0 && lineHeading <= 15) {
         lineHeading1 = lineHeading - 10;
         lineHeading2 = lineHeading - 170;
+      } else if (lineHeading >= 15 && lineHeading <= 160) {
+        lineHeading1 = lineHeading - 25;
+        lineHeading2 = lineHeading - 155;
       } else if (lineHeading < 0 && lineHeading >= -15) {
         lineHeading1 = lineHeading + 10;
-        lineHeading2 = lineHeading + 165;
-      } else if (lineHeading <= -15 && lineHeading >= -160) {
-        lineHeading1 = lineHeading + 35;
-        lineHeading2 = lineHeading + 145;
-      } else if (lineHeading < -160) {
-        lineHeading1 = lineHeading - 5;
-        lineHeading2 = lineHeading + 185;
+        lineHeading2 = lineHeading + 170;
+      } else if (lineHeading < -15 && lineHeading >= -160) {
+        lineHeading1 = lineHeading + 25;
+        lineHeading2 = lineHeading + 155;
       }
 
       return { lineHeading1, lineHeading2 };
