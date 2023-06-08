@@ -11,10 +11,13 @@ window.addEventListener("DOMContentLoaded", () => {
   // Google Maps API script
   const script = document.createElement("script");
   script.src =
-    "https://maps.googleapis.com/maps/api/js?key=*****APY-KEY-HERE*****&libraries=places,geometry&callback=initMap";
+    // "https://maps.googleapis.com/maps/api/js?key=*****APY-KEY-HERE*****&libraries=places,geometry&callback=initMap";
+    "https://maps.googleapis.com/maps/api/js?key=AIzaSyCT9NrHuBQBgnTBOjsyiD-sm5kdzsMbeb8&libraries=places,geometry&callback=initMap";
   script.async = true;
 
   window.initMap = async function () {
+    // const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
     // Initialize map
     google.maps.visualRefresh = true;
     const map = new google.maps.Map(document.getElementById("map"), {
@@ -60,15 +63,50 @@ window.addEventListener("DOMContentLoaded", () => {
 
     initializeServicesAndMarkers(map) {
       this.geocoder = new google.maps.Geocoder();
-      this.orgMarker = this.createMarker(map, google.maps.Animation.DROP);
-      this.dstMarker = this.createMarker(map, google.maps.Animation.DROP);
 
-      this.shadowLine = this.createPolyline("#000000", 0.1, 6);
-      this.curvedLine = this.createPolyline("#FF0000", 1, 3.5, true);
-    }
+      let polylineWidth = 1.5;
+      let shadowWidth = 0.1;
+      let orgMarkerSrc = "../assets/up-arrow-20px.svg";
+      let dstMarkerSrc = "../assets/down-arrow-20px.svg";
+      // let anchorVals = [30, 30];
 
-    createMarker(map, animation) {
-      return new google.maps.Marker({ map, animation });
+      if (window.innerWidth > 600) {
+        polylineWidth = 5.5;
+        shadowWidth = 0.3;
+        orgMarkerSrc = "../assets/up-arrow-30px.svg";
+        dstMarkerSrc = "../assets/down-arrow-30px.svg";
+      }
+
+      const orgMarkerConf = {
+        // url: "../assets/archive.png",
+        url: orgMarkerSrc,
+        // size: new google.maps.Size(24, 24),
+        // The origin for this image is (0, 0).
+        // origin: new google.maps.Point(0, 0),
+        // The anchor for this image is the base of the flagpole at (12, 26). Gives the marker a little offset
+        // anchor: new google.maps.Point(anchorVals[0], anchorVals[1]),
+      };
+
+      const dstMarkerConf = {
+        url: dstMarkerSrc,
+      };
+
+      this.orgMarker = new google.maps.Marker({
+        map,
+        animation: google.maps.Animation.DROP,
+        // icon: "../assets/archive.png",
+        icon: orgMarkerConf,
+      });
+
+      this.dstMarker = new google.maps.Marker({
+        map,
+        animation: google.maps.Animation.DROP,
+        icon: dstMarkerConf,
+      });
+
+      this.shadowLine = this.createPolyline("#000000", shadowWidth, 6);
+      // this.curvedLine = this.createPolyline("#FF0000", 1, 3.5, true);
+      this.curvedLine = this.createPolyline("#38a169", 1, polylineWidth, true);
     }
 
     createPolyline(strokeColor, strokeOpacity, scale, geodesic = false) {
@@ -204,8 +242,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
     calculateLineHeadings(lineHeading) {
       let lineHeading1, lineHeading2;
-
-      console.log(lineHeading);
 
       if (lineHeading > 160) {
         lineHeading1 = lineHeading - 25;
