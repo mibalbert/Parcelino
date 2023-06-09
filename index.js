@@ -10,10 +10,8 @@ const dotenv = require("dotenv");
 const app = express();
 const port = process.env.PORT || 8000;
 
-// app.locals.googleMapsKey = process.env.GOOGLE_MAPS_API_KEY;
-// console.log(app.locals.googleMapsKey);
-
 dotenv.config();
+
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.json());
@@ -22,9 +20,6 @@ app.use(bodyParser.json());
 
 // Static Files
 app.use(express.static("public"));
-global.googleMapsKey = process.env.GOOGLE_MAPS_API_KEY;
-
-console.log(global.googleMapsKey);
 
 // Templating Engine
 const handlebars = exphbs.create({
