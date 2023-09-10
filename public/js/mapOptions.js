@@ -1,7 +1,8 @@
-const YOUR_API_KEY = "AIzaSyCT9NrHuBQBgnTBOjsyiD-sm5kdzsMbeb8";
+
+
 
 export const mapOptions = {
-  src: `https://maps.googleapis.com/maps/api/js?key=${YOUR_API_KEY}&libraries=places,geometry&callback=initMap`,
+  src: `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_KEY}&libraries=places,geometry&callback=initMap`,
   mapSettings: {
     mapId: "b1beacae401d047c",
     rotateControl: false,
