@@ -2,10 +2,13 @@
 
 # Parcelino
 
-[Parcelino.co.uk](https://parcelino.co.uk)
+[Parcelino.co.uk](http://44.218.221.170/)
 
 This is a Node.js application that demonstrates the usage of Google Maps API to display a map with route directions and markers. The application provides an interactive interface to enter origin and destination addresses and generates a route between them.
 
+![google-maps-project-first-pic](https://github.com/mibalbert/Parcelino/assets/86473976/04502ceb-c3a6-415c-948f-24eb523e0d23)
+![google-maps-project-second-pic](https://github.com/mibalbert/Parcelino/assets/86473976/b34bfc52-8dde-4485-a456-8e85da6c5da4)
+![google-maps-project-third-pic](https://github.com/mibalbert/Parcelino/assets/86473976/0e80c826-646e-4c7e-bcf8-c50d547c034f)
 
 
 <br />
